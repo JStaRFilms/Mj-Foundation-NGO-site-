@@ -1,0 +1,82 @@
+:root {
+    --raisin-black: hsl(220, 8%, 14%);
+    --eerie-black-1: hsl(0, 0%, 13%);
+    --silver-chalice: hsl(0, 0%, 70%);
+    --pistachio: hsl(86, 45%, 54%);
+}
+
+/* body{
+    background-color: var(--raisin-black) !important;
+} */
+.header, .header::before, .header::after, .header:active {
+    background-color: var(--eerie-black-1) !important;
+  }
+#gallery {
+    padding-top: 60px;
+    max-width: 1200px;
+    margin: 108px auto;
+    background:white;
+    text-align: center;
+    box-shadow: 3px 1px 20px 30px rgba(0, 0, 0, 0.05);
+}
+#gallery h1 {
+    color: var(--pistachio);
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+#gallery .grid{
+    max-width: 1000px;
+    padding-bottom: 100px;
+    margin: auto;
+    display: grid;
+    gap: 5px;
+}
+#gallery .grid div:first-child{
+    display: grid;
+    grid-template-columns: 3fr 2.1fr 2.1fr;
+    gap: 15px;
+}
+#gallery .grid div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 2.2fr 2.2fr 3fr;
+    gap: 15px;
+}
+
+#gallery .grid div div {
+    
+    height: 300px;
+}
+#gallery .grid div {
+    padding-bottom: 10px;
+}
+#gallery .grid div:first-of-type div:nth-child(1) {
+    background: url('../new-images/HEADER2.jpg') no-repeat center center/cover;
+}
+#gallery .grid div:first-of-type div:nth-child(2) {
+    background: url('../new-images/HEADER1.jpg') no-repeat center center/cover;
+}
+#gallery .grid div:first-of-type div:nth-child(3) {
+    background: url('../new-images/HEADER3.jpg') no-repeat center center/cover;
+}
+#gallery .grid div:last-of-type div:nth-child(1) {
+    background: url('../new-images/HEADER4.jpg') no-repeat center center/cover;
+}
+#gallery .grid div:last-of-type div:nth-child(2) {
+    background: url('../new-images/HEADER5.jpg') no-repeat center center/cover;
+}
+#gallery .grid div:last-of-type div:nth-child(3) {
+    background: url('../new-images/DONATE2.jpg') no-repeat center center/cover;
+}
+/* #gallery .grid div div img {
+    height: min-content;
+    width: 300px;
+} */
+
+@media (min-width:300px) and (max-width:800px) {
+    #gallery .grid {
+        display: block;
+    }
+    #gallery .grid div:nth-child(1),#gallery .grid div:nth-child(2)  {
+        display: block;
+    }
+}
